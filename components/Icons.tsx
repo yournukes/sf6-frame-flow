@@ -1,0 +1,46 @@
+import React from 'react';
+import { 
+  Sword, 
+  Shield, 
+  Zap, 
+  Timer, 
+  Plus, 
+  Trash2, 
+  ChevronRight, 
+  ChevronDown, 
+  BrainCircuit, 
+  Layers, 
+  Activity,
+  Save,
+  FileText,
+  Search,
+  Pencil,
+  X,
+  Tag,
+  Crosshair,
+  Star,
+  GripVertical
+} from 'lucide-react';
+
+export const Icons = {
+  Attack: Sword,
+  Defense: Shield,
+  Meter: Zap,
+  Frame: Timer,
+  Add: Plus,
+  Delete: Trash2,
+  Right: ChevronRight,
+  Down: ChevronDown,
+  AI: BrainCircuit,
+  Combo: Layers,
+  Status: Activity,
+  Save: Save,
+  Note: FileText,
+  Search: Search,
+  Edit: Pencil,
+  Close: X,
+  Tag: Tag,
+  Type: Crosshair,
+  Star: Star,
+  Drag: GripVertical
+};

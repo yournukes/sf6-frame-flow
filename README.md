@@ -1,11 +1,29 @@
-<div align="center">
+# FrameFlow - SF6 Tech Keeper
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+ストリートファイター6のコンボやセットプレイを記録・管理するためのアプリケーションです。
 
-  <h1>Built with AI Studio</h2>
+## 機能仕様
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### 1. データ構造
+以下の階層構造でデータを管理します。
+*   **キャラクター**: 任意のキャラクターを追加・削除・選択可能。
+    *   **マスタデータ (通常技・必殺技)**: 発生、持続、硬直、ヒット時/ガード時フレーム、ダメージ等を記録。
+    *   **コンボレシピ**: 技を繋げたルート、総ダメージ(手動入力)、使用ゲージ、終了後の有利フレームを記録。
+    *   **起き攻め (状況)**: 特定の有利フレーム状況において、どのような選択肢（打撃、投げ、シミー等）が取れるかを記録。
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### 2. 機能要件
+*   **UI言語**: 全て日本語。
+*   **CRUD**: キャラクター、技、コンボ、起き攻めのすべてにおいて、作成(Create)、読み取り(Read)、更新(Update)、削除(Delete)が可能。
+*   **コンボ作成**:
+    *   技を順番に選択してルートを作成。
+    *   ダメージ計算は自動ではなく、プレイヤーが実測値を入力する形式。
+    *   コンボ終了後の有利フレームを入力することで、条件に合う起き攻めをサジェスト。
+*   **AIアシスト**: Google Gemini APIを使用し、技の使い方やコンボの状況判断、起き攻めのアイデアについてアドバイスを取得可能。
 
-</div>
+### 3. タグ・連携
+*   「ダウン」タグ（またはそれに類する有利状況）が設定されたコンボや状況に基づき、登録済みの「起き攻め」データをフレーム範囲で照合して提示する。
+
+## 技術スタック
+*   Frontend: React, Tailwind CSS
+*   AI: Google Gemini API (@google/genai)
+*   Icons: Lucide React
