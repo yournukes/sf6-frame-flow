@@ -1,23 +1,23 @@
 {
-  "name": "copy-of-frameflow---sf6-tech-keeper",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "sf6-tech-keeper",
+  "version": "1.0.0",
+  "description": "SF6 Frame Data and Combo Manager",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "start": "vite",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
     "@google/genai": "^1.41.0",
-    "lucide-react": "^0.563.0"
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4"
   }
 }
